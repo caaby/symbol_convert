@@ -1,6 +1,73 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
+requires = ["hatchling>=1.6.0,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "symbol_convert"
+description="替换掉字符串中的中文符号以及全角符号转换为半角符号"
+readme = "README.md"
+keywords = ["symbol_convert", "中文符号", "全角符号转换"]
+authors = [
+  {name = "Russel", email = "fangling@outlook.com"}
 ]
+maintainers = [
+  {name = "Russel", email="fangling@outlook.com"},
+
+]
+
+classifiers = [
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries",
+]
+requires-python = ">=3.7"
+dynamic = ["version"]
+
+[project.urls]
+"Changelog" = "https://raw.githubusercontent.com/Caaby/symbol_convert/master/docs/history.md"
+"Documentation" = "https://github.com/Caaby/symbol_convert/wiki"
+"Code" = "https://github.com/Caaby/symbol_convert"
+"Issue tracker" = "https://github.com/Caaby/symbol_convert/issues"
+
+[tool.hatch.version]
+path = "src/symbol_convert/_version.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/docs",
+  "/src",
+  "/README.md",
+  "/LICENSE",
+]
+
+[tool.mypy]
+mypy_path = "src"
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+no_implicit_reexport = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
 build-backend = "setuptools.build_meta"

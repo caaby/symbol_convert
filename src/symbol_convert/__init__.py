@@ -1,6 +1,7 @@
 # -*- coding: UTF_8 -*-
 
-from convert import symbol_convert
+from chiness_convert import convert
 
-
-version = "0.11"
+__all__ = (
+    "convert"
+)
