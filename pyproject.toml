@@ -43,7 +43,7 @@ dynamic = ["version"]
 "Issue tracker" = "https://github.com/Caaby/symbol_convert/issues"
 
 [tool.hatch.version]
-path = "src/symbol_convert/_version.py"
+path = "src/symbol_convert/__version__.py"
 
 [tool.hatch.build.targets.sdist]
 include = [

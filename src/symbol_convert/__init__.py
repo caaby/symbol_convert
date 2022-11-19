@@ -1,6 +1,6 @@
 # -*- coding: UTF_8 -*-
 
-from .chiness_convert import convert
+from . _convert import convert
 
 __all__ = (
     "convert"
