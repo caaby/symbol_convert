@@ -12,10 +12,10 @@
 
 ### demo
 ```text
-from symbol_convert import symbol_convert
+from symbol_convert import convert
 
 str = '这是一个，【个人】ｄｅｂｏｋｅ：'
-en_str = symbol_convert(str)
+en_str = convert(str)
 print(str)
 print(en_str)
 > 这是一个，【中文】ｄｅｂｏｋｅ：

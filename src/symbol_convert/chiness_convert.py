@@ -4,18 +4,15 @@ import re
 
 def convert(string: str) -> str:
     """中文特殊符号转英文特殊符号"""
+
     #中文特殊符号批量识别
-
-    # pattern = re.compile('[，。：“”【】《》？；、（）‘’『』「」﹃﹄〔〕—·]')
-
     pattern = re.compile('[。“”【】《》、‘’『』「」﹃﹄〔〕—·]')
     
     #re.compile: 编译一个正则表达式模式，返回一个模式（匹配模式）对象。
     #[...]用于定义待转换的中文特殊符号字符集
 
-    fps = re.findall(pattern, string)
-    
     #re.findall: 搜索string，以列表形式返回全部能匹配的子串。
+    fps = re.findall(pattern, string)
 
     #对有中文特殊符号的文本进行符号替换
     if len(fps):
